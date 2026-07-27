@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Image Map Example - 3 Images</title>
+<title>Image Map - Countries (links to Wikipedia)</title>
 <style>
   body {
     font-family: Arial, sans-serif;
@@ -29,52 +29,34 @@
     transform: scale(1.03);
     cursor: pointer;
   }
-  #output {
-    margin-top: 25px;
-    font-size: 18px;
-    font-weight: bold;
-    color: #444;
-    min-height: 24px;
-  }
 </style>
 </head>
 <body>
 
-<h1>Image Map Demo — 3 Images</h1>
-<p>Click on different regions of each image to trigger an action.</p>
+<h1>Image Map — Countries</h1>
+<p>Click on a flag to open that country's Wikipedia page (opens in a new tab).</p>
 
 <div class="gallery">
 
-  <!-- Image 1: split into 2 clickable areas -->
-  <img src="https://picsum.photos/id/1015/300/200" usemap="#map1" alt="Image 1">
-  <map name="map1">
-    <area shape="rect" coords="0,0,150,200" href="#" onclick="showMsg('Image 1 - Left side clicked'); return false;" alt="Left half">
-    <area shape="rect" coords="150,0,300,200" href="#" onclick="showMsg('Image 1 - Right side clicked'); return false;" alt="Right half">
+  <!-- France -->
+  <img src="https://flagcdn.com/w320/fr.png" usemap="#mapFrance" alt="Flag of France" width="300" height="200">
+  <map name="mapFrance">
+    <area shape="rect" coords="0,0,300,200" href="https://en.wikipedia.org/wiki/France" target="_blank" alt="France">
   </map>
 
-  <!-- Image 2: circle + rectangle area -->
-  <img src="https://picsum.photos/id/1025/300/200" usemap="#map2" alt="Image 2">
-  <map name="map2">
-    <area shape="circle" coords="150,100,80" href="#" onclick="showMsg('Image 2 - Center circle clicked'); return false;" alt="Center circle">
-    <area shape="rect" coords="0,0,300,200" href="#" onclick="showMsg('Image 2 - Background clicked'); return false;" alt="Background">
+  <!-- Japan -->
+  <img src="https://flagcdn.com/w320/jp.png" usemap="#mapJapan" alt="Flag of Japan" width="300" height="200">
+  <map name="mapJapan">
+    <area shape="rect" coords="0,0,300,200" href="https://en.wikipedia.org/wiki/Japan" target="_blank" alt="Japan">
   </map>
 
-  <!-- Image 3: polygon area -->
-  <img src="https://picsum.photos/id/1043/300/200" usemap="#map3" alt="Image 3">
-  <map name="map3">
-    <area shape="poly" coords="150,10,290,190,10,190" href="#" onclick="showMsg('Image 3 - Triangle clicked'); return false;" alt="Triangle">
-    <area shape="rect" coords="0,0,300,200" href="#" onclick="showMsg('Image 3 - Outside triangle clicked'); return false;" alt="Rest of image">
+  <!-- Brazil -->
+  <img src="https://flagcdn.com/w320/br.png" usemap="#mapBrazil" alt="Flag of Brazil" width="300" height="200">
+  <map name="mapBrazil">
+    <area shape="rect" coords="0,0,300,200" href="https://en.wikipedia.org/wiki/Brazil" target="_blank" alt="Brazil">
   </map>
 
 </div>
-
-<p id="output"></p>
-
-<script>
-  function showMsg(text) {
-    document.getElementById('output').textContent = text;
-  }
-</script>
 
 </body>
 </html>
