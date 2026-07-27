@@ -1,38 +1,80 @@
 <!DOCTYPE html>
-<html>
-<body bgcolor="black">
-<Center>
-  
-  <img src= "https://commons.wikimedia.org/wiki/File:Marvel_Logo.svg"
-  alt="imagemap marvel"
-  usemap="marvel"
-  href="https://commons.wikimedia.org/wiki/File:Marvel_Logo.svg" 
-  width="500" 
-  height="300">
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Image Map Example - 3 Images</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+    text-align: center;
+    padding: 40px;
+  }
+  h1 {
+    color: #333;
+  }
+  .gallery {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+  }
+  .gallery img {
+    border: 3px solid #ccc;
+    border-radius: 8px;
+    transition: transform 0.2s;
+  }
+  .gallery img:hover {
+    transform: scale(1.03);
+    cursor: pointer;
+  }
+  #output {
+    margin-top: 25px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #444;
+    min-height: 24px;
+  }
+</style>
+</head>
+<body>
 
-  <map name= "marvel">
+<h1>Image Map Demo — 3 Images</h1>
+<p>Click on different regions of each image to trigger an action.</p>
 
-    <area shape="rect"
-    coords="135,0,265,250"
-      alt="ironman"
-      href="ironman.html"
+<div class="gallery">
 
-       <area shape="rect"
-    coords="270,0,400,250"
-      alt="captainamerica"
-      href="captainamerica.html"
+  <!-- Image 1: split into 2 clickable areas -->
+  <img src="https://picsum.photos/id/1015/300/200" usemap="#map1" alt="Image 1">
+  <map name="map1">
+    <area shape="rect" coords="0,0,150,200" href="#" onclick="showMsg('Image 1 - Left side clicked'); return false;" alt="Left half">
+    <area shape="rect" coords="150,0,300,200" href="#" onclick="showMsg('Image 1 - Right side clicked'); return false;" alt="Right half">
+  </map>
 
-       <area shape="rect"
-    coords="270,0,400,250"
-      alt="hulk"
-      href="hulk.html"
+  <!-- Image 2: circle + rectangle area -->
+  <img src="https://picsum.photos/id/1025/300/200" usemap="#map2" alt="Image 2">
+  <map name="map2">
+    <area shape="circle" coords="150,100,80" href="#" onclick="showMsg('Image 2 - Center circle clicked'); return false;" alt="Center circle">
+    <area shape="rect" coords="0,0,300,200" href="#" onclick="showMsg('Image 2 - Background clicked'); return false;" alt="Background">
+  </map>
 
-      
+  <!-- Image 3: polygon area -->
+  <img src="https://picsum.photos/id/1043/300/200" usemap="#map3" alt="Image 3">
+  <map name="map3">
+    <area shape="poly" coords="150,10,290,190,10,190" href="#" onclick="showMsg('Image 3 - Triangle clicked'); return false;" alt="Triangle">
+    <area shape="rect" coords="0,0,300,200" href="#" onclick="showMsg('Image 3 - Outside triangle clicked'); return false;" alt="Rest of image">
+  </map>
 
-    
+</div>
 
-    
-</map>
-</Center>
+<p id="output"></p>
+
+<script>
+  function showMsg(text) {
+    document.getElementById('output').textContent = text;
+  }
+</script>
+
 </body>
 </html>
