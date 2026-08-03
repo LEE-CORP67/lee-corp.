@@ -1,42 +1,113 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tl">
 <head>
 <meta charset="UTF-8">
 <title>Buwan ng Wika</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Tagalog&display=swap" rel="stylesheet">
+<style>
+  body {
+    margin: 0;
+    position: relative;
+    min-height: 100vh;
+    background-color: #fff8e1;
+    color: #333333;
+    font-family: Arial, sans-serif;
+  }
+
+  /* Background image layer with reduced opacity */
+  body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("https://sinaunangpanahon.com/wp-content/uploads/2025/02/Filipino-nationalism.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.12;
+    z-index: -1;
+  }
+
+  .content {
+    padding: 30px 20px;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  .baybayin {
+    font-family: "Noto Sans Tagalog", sans-serif;
+    font-size: 2em;
+    letter-spacing: 3px;
+  }
+
+  .baybayin-quote {
+    font-family: "Noto Sans Tagalog", sans-serif;
+    font-size: 1.6em;
+    letter-spacing: 2px;
+    display: block;
+  }
+
+  .romanized {
+    font-size: 0.5em;
+    font-style: italic;
+    color: #555;
+    display: block;
+    margin-top: 5px;
+  }
+
+  ul {
+    display: inline-block;
+    text-align: left;
+    list-style-type: none;
+    padding-left: 0;
+  }
+</style>
 </head>
-<body bgcolor="#fff8e1" text="#333333"
-  
-  
-  <p style=background-image: url('https://sinaunangpanahon.com/wp-content/uploads/2025/02/Filipino-nationalism.jpg');>
-
+<body>
 <center>
-<h1><font color="#0038A8">Buwan ng Wika</font></h1>
-<h3><font color="#CE1126">Filipino Language Month</font></h3>
-<img src="https://flagcdn.com/w320/ph.png" alt="Philippine Flag" width="300" height="200">
-<h2><font color="#0038A8">Ano ang Buwan ng Wika?</font></h2>
-<p>
-Ang Buwan ng Wika ay isang taunang pagdiriwang sa Pilipinas na ginaganap tuwing 
-buwan ng Agosto. Layunin nitong itaguyod at parangalan ang Wikang Filipino 
-bilang pambansang wika ng bansa.
-</p>
-<h2><font color="#0038A8">Kasaysayan</font></h2>
-<p>
-Nagsimula ito noong 1955 bilang "Linggo ng Wika" at naging isang buong buwan 
-noong 1997 sa pamamagitan ng Proklamasyon Blg. 1041, na nilagdaan ni dating 
-Pangulong Fidel V. Ramos.
-</p>
-<h2><font color="#CE1126">Paano Ito Ipinagdiriwang?</font></h2>
-<ul>
-Pagsusuot ng Barong Tagalog at Filipiniana attire sa paaralan at trabaho
-Mga patimpalak sa balagtasan, sabayang bigkas, at pagsulat
-Palatuntunan at pagtatanghal ng katutubong sayaw at awit
-Exhibit ng mga lumang panitikan at kasangkapang Pilipino
-Paggamit ng Filipino sa mga anunsyo at palatandaan sa buong Agosto
-</ul>
+<div class="content">
 
+  <h1>
+    <font color="#0038A8" class="baybayin">ᜊᜓᜏᜈ᜔ ᜅ᜔ ᜏᜒᜃ</font>
+    <span class="romanized">(Buwan ng Wika)</span>
+  </h1>
+  <h3><font color="#CE1126">Filipino Language Month</font></h3>
 
-<i>"Ang wika ay identidad ng isang bansa."</i></font>
-  
+  <img src="https://flagcdn.com/w320/ph.png" alt="Philippine Flag" width="300" height="200">
+
+  <h2><font color="#0038A8">Ano ang Buwan ng Wika?</font></h2>
+  <p>
+  Ang Buwan ng Wika ay isang taunang pagdiriwang sa Pilipinas na ginaganap tuwing
+  buwan ng Agosto. Layunin nitong itaguyod at parangalan ang Wikang Filipino
+  bilang pambansang wika ng bansa.
+  </p>
+
+  <h2><font color="#0038A8">Kasaysayan</font></h2>
+  <p>
+  Nagsimula ito noong 1955 bilang "Linggo ng Wika" at naging isang buong buwan
+  noong 1997 sa pamamagitan ng Proklamasyon Blg. 1041, na nilagdaan ni dating
+  Pangulong Fidel V. Ramos.
+  </p>
+
+  <h2><font color="#CE1126">Paano Ito Ipinagdiriwang?</font></h2>
+  <ul>
+    <li>Pagsusuot ng Barong Tagalog at Filipiniana attire sa paaralan at trabaho</li>
+    <li>Mga patimpalak sa balagtasan, sabayang bigkas, at pagsulat</li>
+    <li>Palatuntunan at pagtatanghal ng katutubong sayaw at awit</li>
+    <li>Exhibit ng mga lumang panitikan at kasangkapang Pilipino</li>
+    <li>Paggamit ng Filipino sa mga anunsyo at palatandaan sa buong Agosto</li>
+  </ul>
+
+  <p style="margin-top: 30px;">
+    <span class="baybayin-quote">ᜀᜅ᜔ ᜏᜒᜃ ᜀᜌ᜔ ᜁᜇᜒᜈ᜔ᜆᜒᜇᜇ᜔ ᜅ᜔ ᜁᜐᜅ᜔ ᜊᜈ᜔ᜐ</span>
+    <i>"Ang wika ay identidad ng isang bansa."</i>
+  </p>
+
+</div>
 </center>
 </body>
 </html>
